@@ -13,7 +13,7 @@ public class CarController {
     CarService carService;
 
     @RequestMapping
-    public List<Car> getAllCars(){
+    public List<Car> getAllCars() {
         return carService.getCars();
     }
 
@@ -23,12 +23,12 @@ public class CarController {
     }
 
     @RequestMapping("/car")
-    public List<Car> getByBrand(@RequestParam("brand") String brand){
+    public List<Car> getByBrand(@RequestParam("brand") String brand) {
         return carService.getByBrand(brand);
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void  addCar(@RequestBody Car car){
-        System.out.println(car);
+    public void addCar(@RequestBody Car car) {
+        carService.add(car);
     }
 }

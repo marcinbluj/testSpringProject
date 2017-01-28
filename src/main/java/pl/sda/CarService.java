@@ -32,4 +32,8 @@ public class CarService {
                 .filter(x-> x.getBrand().equals(brand))
                 .collect(Collectors.toList());
     }
+
+    public void add(Car car) {
+        cars.add(car);
+    }
 }
